@@ -1,17 +1,19 @@
 const path = require('path');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const publicPath = path.join(__dirname, 'public');
-const resourcesPath = path.join(publicPath, 'resources');
+const publicPath = path.join(__dirname, 'public')
+const resourcesPath = path.join(publicPath, 'resources')
 
 const killPlugin = function () {
     this.plugin('done', stats => {
         if (stats.compilation.errors && stats.compilation.errors.length > 0) {
-            stats.compilation.errors.forEach(err => console.error(err.message));
-            process.exit(1);
+            /* eslint-disable no-console */
+            stats.compilation.errors.forEach(err => console.error(err.message))
+            /* eslint-enable no-console */
+            process.exit(1)
         }
-    });
-};
+    })
+}
 
 const staticAssetsPlugin = new CopyWebpackPlugin([
     { from: path.join(__dirname, 'assets/html/attachments.html'), to: publicPath },
@@ -21,7 +23,7 @@ const staticAssetsPlugin = new CopyWebpackPlugin([
     { from: path.join(__dirname, 'assets/images/rung-dark.png'), to: resourcesPath },
     { from: path.join(__dirname, 'assets/images/rung.png'), to: resourcesPath },
     { from: path.join(__dirname, 'assets/images/screenshot.png'), to: resourcesPath }
-]);
+])
 
 module.exports = {
     entry: {
@@ -73,4 +75,4 @@ module.exports = {
         killPlugin,
         staticAssetsPlugin
     ]
-};
+}
