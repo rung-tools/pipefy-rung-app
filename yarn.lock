@@ -401,6 +401,10 @@ babel-plugin-function-composition@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-function-composition/-/babel-plugin-function-composition-0.1.1.tgz#c87d660c03a950b332d61b56cd025b98f41a2a59"
 
+babel-plugin-holes@0.9.0:
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-holes/-/babel-plugin-holes-0.9.0.tgz#75d1b3ac67b7aa9b87605825bdfa707927ec439b"
+
 babel-plugin-implicit-function@0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/babel-plugin-implicit-function/-/babel-plugin-implicit-function-0.1.1.tgz#979301e583ac04bb61485da6e648335ef6950bc3"

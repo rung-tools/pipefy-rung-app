@@ -4,6 +4,7 @@
         "pipe-operator-curry",
         "ramda",
         "function-composition",
-        "implicit-function"
+        "implicit-function",
+        "holes"
     ]
 }

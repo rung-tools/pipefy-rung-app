@@ -18,7 +18,7 @@ import { getToken } from './token'
  * @param {String}
  * @return {String}
  */
-const convertLocale = replace(/\-(\w+)/, (_, dialect) => `_${toUpper(dialect)}`)
+const convertLocale = replace(/\-(\w+)/, (rest, dialect) => `_${toUpper(dialect)}`)
 
 /**
  * Displays the dropdown with entry to authenticate. When clicked,
