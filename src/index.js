@@ -65,7 +65,7 @@ const showAppSearch = curry((alias, pipefy) =>
         loading: 'Loading apps',
         empty: 'No app found',
         items: (client, query) => fetch(`https://app.rung.com.br/api/extensions/category/${alias}?lang=${convertLocale(pipefy.locale)}`)
-            .then(response => response.json())
+            .then(_.json())
             .then(
                 map(app => ({
                     title: app.title,

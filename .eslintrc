@@ -4,6 +4,7 @@
         "browser": true
     },
     "globals": {
-        "PipefyApp": true
+        "PipefyApp": true,
+        "_": true
     }
 }
