@@ -1,2 +1,3 @@
-# pipefy-rung-app
-Pipefy Rung App
+# Pipefy Rung App
+
+> Rung extension for Pipefy

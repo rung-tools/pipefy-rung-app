@@ -1,0 +1,14 @@
+{
+    "name": "Rung",
+    "description": "Connect Rung with Pipefy to track your important alerts and notifications. The Rung Power-Up allows you to:\n\n- Install a Rung extension from Pipefy and link to a card\n- Get real-time updates on your Rung alerts\n- See your Rung alerts inside Pipefy and Rung\n\n",
+    "short_description": "Connect Rung with Pipefy to track your important alerts and notifications.",
+    "icon": "https://app.rung.com.br/pipefy/resources/rung.png",
+    "author": "Rung Developers Team",
+    "init_url": "./index.html",
+    "screenshots": ["https://app.rung.com.br/pipefy/resources/screenshot.png"],
+    "features": [
+        "card-buttons",
+        "card-tab",
+        "pipe-buttons"
+    ]
+}
