@@ -1,0 +1,9 @@
+{
+    "presets": ["es2015", "preact"],
+    "plugins": [
+        "pipe-operator-curry",
+        "ramda",
+        "function-composition",
+        "implicit-function"
+    ]
+}
