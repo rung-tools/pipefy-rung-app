@@ -1,5 +1,4 @@
 import {
-    T,
     contains,
     curry,
     filter,
@@ -8,6 +7,7 @@ import {
     startsWith,
     toLower,
     toUpper,
+    when,
     where
 } from 'ramda'
 import { getToken } from './token'
@@ -74,11 +74,9 @@ const showAppSearch = curry((alias, pipefy) =>
                         return showAppModal(app.name, pipefy)
                     }
                 }))
-                & filter(where({
-                    title: query && query.length > 0
-                        ? toLower & contains(toLower(query))
-                        : T
-                }))
+                & when(~(query && query.length > 0), filter(where({
+                    title: toLower & contains(toLower(query))
+                })))
             )
     }))
 
@@ -96,17 +94,15 @@ const showCategorySearch = pipefy =>
         loading: 'Loading categories',
         empty: 'No category found',
         items: (client, query) => fetch(`https://app.rung.com.br/api/categories?lang=${convertLocale(pipefy.locale)}`)
-            .then(response => response.json())
+            .then(_.json())
             .then(
-                map(category => ({
-                    title: category.name,
-                    callback: showAppSearch(category.alias)
+                map(({ alias, name }) => ({
+                    title: name,
+                    callback: showAppSearch(alias)
                 }))
-                & filter(where({
-                    title: query && query.length > 0
-                        ? toLower & contains(toLower(query))
-                        : T
-                }))
+                & when(~(query && query.length > 0), filter(where({
+                    title: toLower & contains(toLower(query))
+                })))
             )
     })
 

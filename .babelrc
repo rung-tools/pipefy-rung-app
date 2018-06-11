@@ -1,10 +1,10 @@
 {
     "presets": ["es2015", "preact"],
     "plugins": [
+        "holes",
         "pipe-operator-curry",
         "ramda",
         "function-composition",
-        "implicit-function",
-        "holes"
+        "implicit-function"
     ]
 }
