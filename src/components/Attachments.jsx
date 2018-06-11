@@ -21,7 +21,7 @@ export default class Attachments extends Component {
 
         const request = attachments
             | map(({ id, url, name }) => fetch(url)
-                .then(response => response.json())
+                .then(_.json())
                 .then(alerts => ({ id, url, name, alerts })))
             | this.props.pipefy.Promise.all
 
@@ -46,7 +46,7 @@ export default class Attachments extends Component {
         }
 
         if (state.integrations.length === 0) {
-            return <p>You don't have Rung integrations attached to this card.</p>
+            return <p>You have no Rung apps attached to this card.</p>
         }
 
         return (
