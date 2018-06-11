@@ -110,7 +110,6 @@ const showCategorySearch = pipefy =>
             )
     })
 
-/* global PipefyApp */
 PipefyApp.initCall({
     'card-tab': (pipefy, pipe) => ({
         icon: './resources/rung.png',
