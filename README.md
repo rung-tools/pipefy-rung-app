@@ -1,3 +1,3 @@
 # Pipefy Rung App
 
-> Rung extension for Pipefy (React + Custom ES6 version)
+> Rung extension for Pipefy (Preact + Custom ES6 version)
