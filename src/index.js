@@ -120,7 +120,7 @@ PipefyApp.initCall({
             {
                 text: 'Attach',
                 callback: pipefy => getToken(pipefy)
-                    .then(token => showCategorySearch(pipefy))
+                    .then(~showCategorySearch(pipefy))
             }
         ]
     })
